@@ -365,6 +365,7 @@ margin-bottom: 20px;
     border-bottom: 1px solid #3b82f6;
 }
 @media (max-width: 700px) {
+
     .menu {
         top: 20px;
         right: 20px;
@@ -379,73 +380,105 @@ margin-bottom: 20px;
     }
 
     .contenido {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
         padding: 100px 25px;
+        overflow-x: hidden;
     }
 
     .galeria {
         flex-direction: column;
         gap: 20px;
+        width: 100%;
     }
 
     .galeria img {
         width: 100%;
+        max-width: 100%;
         height: auto;
+        box-sizing: border-box;
+    }
+
+    .contacto {
+        width: 100%;
+        max-width: 100%;
+        text-align: left !important;
+        transform: none;
+        box-sizing: border-box;
+    }
+
+    .contacto .titulo-seccion,
+    .contacto .contacto-contenido {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        box-sizing: border-box;
+    }
+
+    .contacto-contenido {
+        overflow-wrap: anywhere;
+        word-break: break-word;
     }
 
     .contacto-contenido h2 {
         font-size: 48px;
+        max-width: 100%;
+        overflow-wrap: anywhere;
     }
 
     .frase-sobre-mi {
         font-size: 36px;
+        max-width: 100%;
+        overflow-wrap: anywhere;
     }
-    .contacto,
-.redes,
-footer {
-    transform: none;
 
-}
+    .redes {
+        width: 100%;
+        max-width: 100%;
+        transform: none;
+        box-sizing: border-box;
+        overflow-wrap: anywhere;
+    }
 
-.hero p {
-    animation-delay: 0.3s;
-}
+    footer {
+        width: 100%;
+        max-width: 100%;
+        transform: none;
+        box-sizing: border-box;
+        overflow: hidden;
+        overflow-wrap: anywhere;
+    }
 
-@keyframes aparecer {
-    to {
+    .hero {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .hero h1 {
+        max-width: 100%;
+        box-sizing: border-box;
+        word-break: break-word;
+        overflow-wrap: anywhere;
+    }
+
+    .hero p {
+        animation-delay: 0.3s;
+        max-width: 100%;
+        overflow-wrap: anywhere;
+    }
+
+    .contenido.visible {
         opacity: 1;
         transform: translateY(0);
     }
-}
-.contacto {
-    text-align: left !important;
-}
 
-.contacto .titulo-seccion,
-.contacto .contacto-contenido {
-    width: 100%;
-    max-width: 700px;
-    margin-left: 0 !important;
-    margin-right: auto !important;
-}
-.contenido {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.contenido.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-@media (prefers-reduced-motion: reduce) {
-    .contenido {
-        opacity: 1;
-        transform: none;
-        transition: none;
+    .visor-imagen {
+        display: none;
     }
-}
-.visor-imagen {
-    display: none;
 }
     </style>
 </head>
