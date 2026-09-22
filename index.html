@@ -452,19 +452,19 @@ margin-bottom: 20px;
     }
 
     .hero {
-        width: 100%;
-        max-width: 100%;
-        box-sizing: border-box;
-        overflow: hidden;
-    }
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    overflow: visible;
+}
 
     .hero h1 {
-    font-size: 15vw;
+    font-size: clamp(50px, 14vw, 100px);
     line-height: 0.9;
-    letter-spacing: -4px;
-    max-width: 100%;
-    width: 100%;
-    box-sizing: border-box;
+    letter-spacing: -5px;
+    width: max-content;
+    max-width: none;
     white-space: nowrap;
 }
 .hero {
