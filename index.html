@@ -642,22 +642,22 @@ footer {
     secciones.forEach((seccion) => {
         observador.observe(seccion);
     });
-const secciones = document.querySelectorAll('.contenido');
-const fotos = document.querySelectorAll('.galeria img');
-const visor = document.getElementById('visorImagen');
-const imagenGrande = document.getElementById('imagenGrande');
-const cerrar = document.getElementById('cerrarImagen');
 
-fotos.forEach((foto) => {
-    foto.addEventListener('click', () => {
-        imagenGrande.src = foto.src;
-        visor.style.display = 'flex';
+    const fotos = document.querySelectorAll('.galeria img');
+    const visor = document.getElementById('visorImagen');
+    const imagenGrande = document.getElementById('imagenGrande');
+    const cerrar = document.getElementById('cerrarImagen');
+
+    fotos.forEach((foto) => {
+        foto.addEventListener('click', () => {
+            imagenGrande.src = foto.src;
+            visor.style.display = 'flex';
+        });
     });
-});
 
-cerrar.addEventListener('click', () => {
-    visor.style.display = 'none';
-});
-    </script>
+    cerrar.addEventListener('click', () => {
+        visor.style.display = 'none';
+    });
+</script>
 </body>
 </html>
